@@ -1,0 +1,51 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/memejames/Nothing-project1/main/Suku')))()
+
+local Window = OrionLib:MakeWindow({Name = "QuickRoll│Projeto LKA", HidePremium = true, SaveConfig = false, ConfigFolder = "Projeto LKA", IntroText = "Projeto LKA", IntroIcon = "rbxassetid://15797726334", IntroEnabled = true, Icon = "rbxassetid://15797726334"})
+
+local Tab = Window:MakeTab({
+	Name = "Main ",
+	Icon = "rbxassetid://15696178563",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Turn on And Rejoin")
+Tab:AddLabel("and close you roblox")
+Tab:AddLabel("and open again")
+Tab:AddLabel("Join private server to work")
+Tab:AddLabel("have chance bug")
+Tab:AddLabel("Update 24/03/2024")
+
+Tab:AddButton({
+	Name = "Turn On",
+	Callback = function()
+local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
+ts:Teleport(game.PlaceId, p)
+	end    
+})
+
+Tab:AddButton({
+	Name = "Turn On",
+	Callback = function()
+local args = {
+    [1] = "QuickRoll",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage").Network.Rolling:InvokeServer(unpack(args))
+	end    
+})
+
+Tab:AddButton({
+	Name = "Turn Off",
+	Callback = function()
+local args = {
+    [1] = "QuickRoll",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Network.Rolling:InvokeServer(unpack(args))
+	end    
+})
+
+OrionLib:Init()
