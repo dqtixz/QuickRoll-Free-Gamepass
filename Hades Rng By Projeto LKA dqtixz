@@ -16,7 +16,7 @@ Tab:AddLabel("have chance bug")
 Tab:AddLabel("Update 24/03/2024")
 
 Tab:AddButton({
-	Name = "Turn On",
+	Name = "Rejoin (Name Fix)",
 	Callback = function()
 local ts = game:GetService("TeleportService")
 local p = game:GetService("Players").LocalPlayer
